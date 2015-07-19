@@ -1,5 +1,7 @@
 body {
   padding-top: 50px;
+  background-image: url(../img/body-bg.jpg);
+  background-size:100%;
 }
 .row{
   padding-left: 0px;
@@ -28,7 +30,7 @@ body {
     -webkit-transform: rotateY(180deg);
 	}
 
-.card-box, .front, .back, .flipper {
+.card-box, .front-card, .back-card, .flipper {
   width: inherit;
 	height: 700px;
   -webkit-border-radius: 6px;
@@ -47,7 +49,7 @@ body {
 }
 
 /* hide back of pane during swap */
-.front, .back {
+.front-card, .back-card {
 	backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 	position: absolute;
@@ -56,7 +58,7 @@ body {
 }
 
 /* front pane, placed above back */
-.front {
+.front-card {
 	z-index: 2;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
@@ -64,12 +66,50 @@ body {
 }
 
 /* back, initially hidden pane */
-.back {
+.back-card {
 	transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .card-box:hover .flipper, .card-box.hover .flipper, .card-box.flip .flipper {
 	transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
+}
+
+.navbar{
+  background-color: transparent;
+}
+
+.bgBlur{
+  background-image: url(../img/body-bg.jpg);
+  opacity: 0.7;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
+
+.back-container{
+  border-radius: 10px;
+  border:3px solid gray;
+  margin: 10%;
+  padding: 4%;
+  color: white;
+}
+
+.navbar-header{
+  text-align: center;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav{
+  background-color: rgba(0, 0, 0, 0.3);;
+}
+
+.navbar-inverse .navbar-nav>.active>a{
+border-bottom: 1px solid #E1E1E1;
+margin-bottom: -1px;
+}
+.back-container>p{
+  white-space:normal;
 }

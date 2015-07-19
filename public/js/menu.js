@@ -2,19 +2,29 @@ var app = angular.module("menu", []);
 app.controller("myCtrl", function ($scope) {
   $scope.winHeight = window.innerHeight;
   $scope.cards = [{
-    'link': '',
-    'env': 'PHP'
+    'img': './img/php.jpg',
+    'env': 'PHP',
+    'link': 'http://qylsteve.herokuapp.com',
+    'content': 'This is the profile page for Steve'
   }, {
+    'img': './img/node.jpg',
+    'env': 'NodeJs',
     'link': '',
-    'env': 'NodeJs'
+    'content': 'This is the only node application currently'
   }, {
+    'img': './img/django.jpg',
+    'env': 'Django',
     'link': '',
-    'env': 'Django'
+    'content': ''
   }, {
+    'img': './img/rail.jpg',
+    'env': 'Rail',
     'link': '',
-    'env': 'Rail'
+    'content': ''
   }, {
+    'img': './img/net.jpg',
+    'env': '.NET',
     'link': '',
-    'env': '.NET'
+    'content': ''
   }];
 });

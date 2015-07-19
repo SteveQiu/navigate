@@ -3,16 +3,19 @@
     <div class="card-rack">
       <!--  -->
       <div ng-repeat="card in cards track by $index" class="card" style="max-height:{{winHeight-70}}px;">
-        <div class="card-box">
+        <a class="card-box" href="{{card.link}}">
           <div class="flipper">
-            <div class="front" style="background-color:gray;">
-              Card #{{$index}}
-            </div>
-            <div class="back" style="background-color:yellow">
-              {{card.env}}
+            <div class="front-card" ng-style="{'background-image':'url({{card.img}})'}"></div>
+            <div class="back-card">
+              <div class="back-container" style="height:{{(winHeight-70)*7/8}}px;">
+                <h2>{{card.env}}</h2>
+                <p>
+                  {{card.content}}
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
       <!--  -->
     </div>
