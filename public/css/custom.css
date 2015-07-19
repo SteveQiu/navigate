@@ -1,37 +1,55 @@
 body {
   padding-top: 50px;
 }
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
+.row{
+  padding-left: 0px;
+}
+.card-rack{
+  display: inline-block;
+  position: relative;
+  overflow-x:auto;
+  overflow-y:hidden;
+  white-space: nowrap;
+}
+
+.card{
+  display: inline-block;
+  width:300px;
 }
 
 /* entire container, keeps perspective */
-.flip-container {
+.card-box {
 	perspective: 1000;
+  -webkit-perspective: 1000;
 }
 	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
+	.card-box:hover .flipper, .card-box.hover .flipper {
 		transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 	}
 
-.flip-container, .front, .back {
-	width: 320px;
-	height: 480px;
+.card-box, .front, .back, .flipper {
+  width: inherit;
+	height: 700px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
 }
 
 /* flip speed goes here */
 .flipper {
+  width: inherit;
 	transition: 0.6s;
+  -webkit-transition: 0.6s;
 	transform-style: preserve-3d;
-
+  -webkit-transform-style: preserve-3d;
 	position: relative;
 }
 
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
-
+  -webkit-backface-visibility: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -42,9 +60,16 @@ body {
 	z-index: 2;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
 }
 
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+.card-box:hover .flipper, .card-box.hover .flipper, .card-box.flip .flipper {
+	transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }

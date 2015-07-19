@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="card-rack">
+      <!--  -->
+      <div ng-repeat="card in cards track by $index" class="card" style="max-height:{{winHeight-70}}px;">
+        <div class="card-box">
+          <div class="flipper">
+            <div class="front" style="background-color:gray;">
+              Card #{{$index}}
+            </div>
+            <div class="back" style="background-color:yellow">
+              {{card.env}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+    </div>
+  </div>
+</div>
