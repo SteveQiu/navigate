@@ -10,13 +10,13 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#home">Navigation Page</a>
+        <a class="navbar-brand" href="#home" ng-click="setTag('home')">Navigation Page</a>
       </div>
       <!-- collapse Nav bar -->
       <div id="navbar" class="collapse navbar-collapse col-sm-4 col-md-4">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li ng-class="pickClass('about')"><a href="#about" ng-click="setTag('about')">About</a></li>
+          <li ng-class="pickClass('contact')"><a href="#contact" ng-click="setTag('contact')">Contact</a></li>
         </ul>
       </div>
     </div>

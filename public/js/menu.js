@@ -1,6 +1,7 @@
 var app = angular.module("menu", []);
 app.controller("myCtrl", function ($scope) {
   $scope.winHeight = window.innerHeight;
+  $scope.tag = 'home';
   $scope.cards = [{
     'img': './img/php.jpg',
     'env': 'PHP',
@@ -27,4 +28,15 @@ app.controller("myCtrl", function ($scope) {
     'link': '',
     'content': ''
   }];
+
+  $scope.setTag = function(tagName){
+    $scope.tag = tagName;
+  }
+
+  $scope.pickClass = function(tagName){
+    if ($scope.tag == tagName) {
+      return 'active';
+    };
+    return '';
+  }
 });
