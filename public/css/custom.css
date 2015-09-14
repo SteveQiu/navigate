@@ -1,3 +1,17 @@
+.footer{
+  position: fixed !important;
+  width: 100% !important;
+  opacity: 0.8;
+  border-top: thick solid white;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 2em;
+  position:relative;
+  width:auto;
+  background-color: black;
+  color: white;
+}
+
 body {
   padding-top: 50px;
   background-image: url(../img/body-bg.jpg);

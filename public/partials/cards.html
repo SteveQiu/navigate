@@ -2,12 +2,12 @@
   <div class="row">
     <div class="card-rack">
       <!--  -->
-      <div ng-repeat="card in cards track by $index" class="card" style="max-height:{{winHeight-70}}px;">
+      <div ng-repeat="card in cards track by $index" class="card" style="max-height:{{cardHeight}}px;">
         <a class="card-box" href="{{card.link}}">
           <div class="flipper">
             <div class="front-card" ng-style="{'background-image':'url({{card.img}})'}"></div>
             <div class="back-card">
-              <div class="back-container" style="height:{{(winHeight-70)*7/8}}px;">
+              <div class="back-container" style="height:{{(cardHeight)*7/8}}px;">
                 <h2>{{card.env}}</h2>
                 <p>
                   {{card.content}}
