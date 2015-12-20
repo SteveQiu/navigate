@@ -23,8 +23,8 @@ app.controller("myCtrl", function ($scope) {
   }, {
     'img': './img/rail.jpg',
     'env': 'Rail',
-    'link': '',
-    'content': ''
+    'link': 'https://infiloopmusic.herokuapp.com/',
+    'content': 'A simple web application using Rails and prestige sql'
   }, {
     'img': './img/net.jpg',
     'env': '.NET',
