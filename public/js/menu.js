@@ -18,7 +18,7 @@ app.controller("myCtrl", function ($scope) {
   }, {
     'img': './img/django.jpg',
     'env': 'Django',
-    'link': 'https://webnote.herokuapp.com/',
+    'link': 'https://noteweb.herokuapp.com/',
     'content': 'This is a simple note taking application with authentication.'
   }, {
     'img': './img/rail.jpg',
