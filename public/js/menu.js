@@ -30,6 +30,11 @@ app.controller("myCtrl", function ($scope) {
     'env': '.NET',
     'link': '',
     'content': ''
+  }, {
+    'img': './img/java.jpg',
+    'env': '.JAVA',
+    'link': '',
+    'content': 'Java Spring app with hibernate and reactjs'
   }];
   $scope.message = {
     'about': 'This is a brief introduction',
