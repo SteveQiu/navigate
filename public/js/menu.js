@@ -34,7 +34,7 @@ app.controller("myCtrl", function ($scope) {
     'img': './img/java.jpg',
     'env': '.JAVA',
     'link': '',
-    'content': 'Java Spring app with hibernate and reactjs'
+    'content': ''
   }];
   $scope.message = {
     'about': 'This is a brief introduction',
