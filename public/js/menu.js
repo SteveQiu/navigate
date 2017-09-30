@@ -25,12 +25,14 @@ app.controller("myCtrl", function ($scope) {
     'env': 'Rail',
     'link': 'https://infiloopmusic.herokuapp.com/',
     'content': 'A simple web application using Rails and prestige sql'
-  }, {
-    'img': './img/net.jpg',
-    'env': '.NET',
-    'link': '',
-    'content': ''
-  }, {
+  },
+  // {
+  //   'img': './img/net.jpg',
+  //   'env': '.NET',
+  //   'link': '',
+  //   'content': ''
+  // },
+  {
     'img': './img/java.jpg',
     'env': '.JAVA',
     'link': 'http://www.tanalysis.com',
