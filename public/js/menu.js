@@ -33,8 +33,8 @@ app.controller("myCtrl", function ($scope) {
   }, {
     'img': './img/java.jpg',
     'env': '.JAVA',
-    'link': '',
-    'content': ''
+    'link': 'http://www.tanalysis.com',
+    'content': 'This is a website for stock query. It also include some other statistics calculated base on information received.'
   }];
   $scope.message = {
     'about': 'This is a brief introduction',
