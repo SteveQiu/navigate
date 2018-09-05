@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "My personal menu page",
   "main": "app.js",
-  "licenses": [{
-    "type": "MIT",
-    "url": "https://raw.github.com/ericclemmons/genesis-skeleton/master/LICENSE"
-  }],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/ericclemmons/genesis-skeleton/master/LICENSE"
+    }
+  ],
   "engines": {
     "node": "0.12.x",
     "npm": "2.11.x"
