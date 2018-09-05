@@ -36,7 +36,7 @@ app.controller("myCtrl", function ($scope) {
     'img': './img/java.jpg',
     'env': '.JAVA',
     'link': 'http://targetanalysis.steveqiu.com',
-    'content': 'This is a website for stock query. It also include some other statistics calculated base on information received.'
+    'content': 'This is a website for stock query. It also include some other statistics calculated base on information received. No Paid Subcription. It currently has only some cached data with MCD, BA, MAR, LVS, APLE, WYNN '
   }];
   $scope.message = {
     'about': 'This is a brief introduction',
