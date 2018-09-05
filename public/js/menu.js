@@ -35,7 +35,7 @@ app.controller("myCtrl", function ($scope) {
   {
     'img': './img/java.jpg',
     'env': '.JAVA',
-    'link': 'targetanalysis.steveqiu.com',
+    'link': 'http://targetanalysis.steveqiu.com',
     'content': 'This is a website for stock query. It also include some other statistics calculated base on information received.'
   }];
   $scope.message = {
