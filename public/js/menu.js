@@ -35,7 +35,7 @@ app.controller("myCtrl", function ($scope) {
   {
     'img': './img/java.jpg',
     'env': '.JAVA',
-    'link': 'http://www.tanalysis.com',
+    'link': 'http://young-crag-71681.herokuapp.com/',
     'content': 'This is a website for stock query. It also include some other statistics calculated base on information received.'
   }];
   $scope.message = {
