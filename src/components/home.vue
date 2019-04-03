@@ -1,5 +1,5 @@
 <template>
-   <h3>This is a VueJS Webpack NodeJS Project. It is used as a website directory.</h3>
+   <h3>This is a VueJS Webpack NodeJS Project. It is used as a directory for Steve's website.</h3>
 </template>
 <script>
   // Home.vue
@@ -23,5 +23,6 @@ export default {
 <style lang="less" scoped>
 h3{
   padding: 40px;
+  padding-top: 0;
 }
 </style>

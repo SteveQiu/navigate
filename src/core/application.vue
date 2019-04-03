@@ -1,10 +1,10 @@
 <template>
    <div id="app">
-      <h1>Steve's Web Projects</h1>
+      <h1>Steve's Web Directory</h1>
       <p>
-        <router-link to="/">Home</router-link>
-        <router-link to="/projects">Web Projects</router-link>
-        <router-link to="/contact">Contact</router-link>
+        <router-link class="btn-outline" to="/">Home</router-link>
+        <router-link class="btn-outline" to="/projects">Web Projects</router-link>
+        <router-link class="btn-outline" to="/contact">Contact</router-link>
       </p>
       <!-- route outlet -->
       <router-view></router-view>
@@ -25,9 +25,23 @@
 <style lang="less" scoped>
 h1{
    text-align: center;
+   margin-botton: 42px;
+   font-size: 3em;
+}
+.btn-outline{
+   text-align: center;
+   margin: 30px;
+   border: solid #316c94 3px;
+   padding: 7px 24px;
+   border-radius: 8px;
+   color: #316c94;
+}
+.router-link-exact-active{
+   color: white;
+   background-color: #316c94;
 }
 p{
-   margin: 20px;
    text-align: center;
+   margin-bottom: 40px;
 }
 </style>
