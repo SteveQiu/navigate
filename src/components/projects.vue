@@ -1,12 +1,11 @@
 <template>
    <div>
-     <ul>
-       <li v-for="site in sites">
-         <a v-bind:href="site.link" target="_blank">
-          {{site.env}} - {{site.content}}
-         </a>
-       </li>
-     </ul>
+      <a v-for="site in sites" v-bind:href="site.link" target="_blank">
+        <div>
+          <div>{{site.env}}</div>
+          <div>{{site.content}}</div>
+        </div>
+      </a>
    </div>
 </template>
 <script>
