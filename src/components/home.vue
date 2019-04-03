@@ -1,14 +1,14 @@
 <template>
-   <h4>home</h4>
+   <h3>This is a VueJS Webpack NodeJS Project. It is used as a website directory.</h3>
 </template>
 <script>
   // Home.vue
 export default {
   computed: {
-    username () {
-      // We will see what `params` is shortly
-      // return this.$route.params.username
-    }
+    // username () {
+    //   // We will see what `params` is shortly
+    //   // return this.$route.params.username
+    // }
   },
   methods: {
     goBack () {
@@ -19,3 +19,9 @@ export default {
   }
 }
 </script>
+
+<style lang="less" scoped>
+h3{
+  padding: 40px;
+}
+</style>
