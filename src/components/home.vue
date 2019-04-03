@@ -24,5 +24,7 @@ export default {
 h3{
   padding: 40px;
   padding-top: 0;
+  color: #4c4c4c;
+  text-align: center;
 }
 </style>
