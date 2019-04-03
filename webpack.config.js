@@ -1,5 +1,5 @@
 const path = require('path');
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
   mode:'production',
@@ -27,13 +27,8 @@ module.exports = {
       test: /\.vue$/,
       loader: 'vue-loader',
       options: {
-        hotReload: true // disables Hot Reload
+        // hotReload: true // disables Hot Reload
       }
-    },
-    {
-      test: /\.ts$/,
-      loader: 'ts-loader',
-      options: { appendTsSuffixTo: [/\.vue$/] }
     },
     {
       test: /\.js$/,

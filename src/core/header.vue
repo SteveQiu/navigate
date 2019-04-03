@@ -5,7 +5,7 @@
    export default {
        data: ()=>{
            return{
-               hello:'The Header'
+               hello:"Steve's Homepage - VueJS Webpack NodeJS Project"
            };
        }
    }
