@@ -1,18 +1,20 @@
 <template>
-   <div>
-      <p>{{hello}}</p>
-      <header></header>
+   <div id="app">
+      <h1>Steve's Homepage - VueJS Webpack NodeJS Project</h1>
+      <p>
+        <router-link to="/">Home</router-link>
+        <router-link to="/foo">Foo</router-link>
+        <router-link to="/bar">Bar</router-link>
+      </p>
+      <!-- route outlet -->
+      <router-view></router-view>
    </div>
 </template>
 <script>
-   import header from './header.vue';
-   console.log(header);
+   import Vue from 'vue';
 
    export default {
-      // name:'Application',
-      components:{
-         header:header,
-      },
+      name:'Application',
       data: ()=>{
            return{
                hello:'Vue app'
