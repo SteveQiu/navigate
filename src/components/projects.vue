@@ -34,7 +34,7 @@ export default {
       {
         'env': 'JAVA',
         'link': 'http://targetanalysis.steveqiu.com',
-        'content': 'This is a website for company financial statement query. Due price hike. I stopped subscription and it has only some cached data with MCD, BA, MAR, LVS, AAPL, WYNN'
+        'content': 'MongoDB Spring App. This is a website for company financial statement query. Due price hike, I stopped subscription and it only has some cached data with MCD, BA, MAR, LVS, AAPL, WYNN'
       }]
     }
   },
