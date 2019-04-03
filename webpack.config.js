@@ -5,8 +5,8 @@ module.exports = {
   mode:'production',
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'public/javascripts'),
-    filename: 'application.js'
+    path: path.resolve(__dirname, 'public/dist'),
+    filename: 'application-bundle.js'
   },
   resolve: {
     alias: {
@@ -27,7 +27,7 @@ module.exports = {
       test: /\.vue$/,
       loader: 'vue-loader',
       options: {
-        hotReload: false // disables Hot Reload
+        hotReload: true // disables Hot Reload
       }
     },
     {

@@ -7,7 +7,7 @@
     "server": "DEBUG=vuejs:* npm start",
     "docker": "docker build -t sdeq/vue-practice . && docker run -p 49160:8080 -d sdeq/vue-practice",
     "dev": "webpack-dev-server --mode development",
-    "prod": "webpack --mode production"
+    "prd": "webpack --mode production"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -29,6 +29,7 @@
     "ts-loader": "^5.3.3",
     "typescript": "^3.4.1",
     "vue-loader": "^15.7.0",
+    "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
