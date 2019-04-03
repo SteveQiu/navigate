@@ -34,7 +34,7 @@ export default {
       {
         'env': 'JAVA',
         'link': 'http://targetanalysis.steveqiu.com',
-        'content': 'This is a website for stock query. It also include some other statistics calculated base on information received. No Paid Subcription. It currently has only some cached data with MCD, BA, MAR, LVS, APLE, WYNN '
+        'content': 'This is a website for company financial statement query. Due price hike. I stopped subscription and it has only some cached data with MCD, BA, MAR, LVS, AAPL, WYNN'
       }]
     }
   },
