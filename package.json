@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "npm run build && node ./bin/www",
     "server": "DEBUG=vuejs:* nodemon ./bin/www",
     "docker": "docker build -t sdeq/vue-practice . && docker run -p 49160:8080 -d sdeq/vue-practice",
     "dev": "webpack-dev-server  --hot --mode development",
-    "prd": "webpack --mode production"
+    "build": "webpack --mode production"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",

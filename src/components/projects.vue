@@ -20,7 +20,7 @@ export default {
       }, {
         'env': 'NodeJs',
         'link': 'https://thechecklist.herokuapp.com/',
-        'content': 'This is only a testing prototype of an application'
+        'content': 'MEAN(MongoDB ExpressJS AngularJS NodeJS) stack. This is only a testing prototype of an TODO List application'
       }, {
         'env': 'Django',
         'link': 'https://noteweb.herokuapp.com/',
