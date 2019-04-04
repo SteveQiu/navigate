@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "npm run build && node ./bin/www",
+    "start": "node ./bin/www",
     "server": "DEBUG=vuejs:* nodemon ./bin/www",
     "docker": "docker build -t sdeq/vue-practice . && docker run -p 49160:8080 -d sdeq/vue-practice",
     "dev": "webpack-dev-server  --hot --mode development",
