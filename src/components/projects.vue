@@ -1,5 +1,5 @@
 <template>
-   <div>
+   <div class="content-box">
       <a v-for="site in sites" v-bind:href="site.link" target="_blank">
         <div class="box">
           <div class="title">{{site.env}}</div>
@@ -33,7 +33,7 @@ export default {
       {
         'env': 'JAVA',
         'link': 'http://targetanalysis.steveqiu.com',
-        'content': 'MongoDB Spring App for financial statement query. Due price hike, I stopped subscription. Cached: MCD, BA, MAR, LVS, AAPL, WYNN'
+        'content': 'MongoDB Spring ReactJS App for financial statement query. Due price hike, I stopped subscription. Cached: MCD, BA, MAR, LVS, AAPL, WYNN'
       }]
     }
   },
@@ -65,7 +65,7 @@ export default {
   font-size: x-large;
   font-family: sans-serif;
 }
-.description{
-
+.content-box{
+ padding-bottom: 60px;
 }
 </style>
