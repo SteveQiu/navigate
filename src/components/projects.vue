@@ -52,7 +52,8 @@ export default {
   margin: 14px;
   width: 200px;
   height: 250px;
-  border: solid #316c94 6px;
+  border: solid #316c94 8px;
+  border-radius: 5px;
   padding: 7px 24px;
   color: #316c94;
   float: left;
