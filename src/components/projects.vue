@@ -1,9 +1,9 @@
 <template>
    <div>
       <a v-for="site in sites" v-bind:href="site.link" target="_blank">
-        <div>
-          <div>{{site.env}}</div>
-          <div>{{site.content}}</div>
+        <div class="box">
+          <div class="title">{{site.env}}</div>
+          <div class="description">{{site.content}}</div>
         </div>
       </a>
    </div>
@@ -48,11 +48,25 @@ export default {
 </script>
 
 <style lang="less" scoped>
-ul{
-  list-style-type:none;
+.box{
+  margin: 14px;
+  width: 200px;
+  height: 250px;
+  border: solid #316c94 8px;
+  border-radius: 5px;
+  padding: 7px 24px;
+  color: #316c94;
+  float: left;
 }
-li{
+.title{
   margin-top: 20px;
   margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+  font-size: x-large;
+  font-family: sans-serif;
+}
+.content-box{
+ padding-bottom: 60px;
 }
 </style>
