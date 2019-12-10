@@ -25,7 +25,6 @@
 <style lang="less" scoped>
 h1{
    text-align: center;
-   margin-botton: 42px;
    font-size: 3em;
 }
 .btn-outline{
@@ -43,5 +42,10 @@ h1{
 p{
    text-align: center;
    margin-bottom: 40px;
+}
+@media (max-width: 600px) {
+  p {
+    display: grid;
+  }
 }
 </style>
