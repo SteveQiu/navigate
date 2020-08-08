@@ -1,6 +1,12 @@
 <template>
    <div class="content-box">
-      <a v-for="site in sites" v-bind:href="site.link" target="_blank">
+      <a 
+        v-for="site in sites" 
+        :key="site.env" 
+        :href="site.link" 
+        target="_blank"
+        :class="{disabled:site.disabled}"
+      >
         <div class="box">
           <div class="title">{{site.env}}</div>
           <div class="description">{{site.content}}</div>
@@ -16,24 +22,29 @@ export default {
       sites:[{
         'env': 'PHP',
         'link': 'http://qylsteve.herokuapp.com',
-        'content': 'This is the profile page for Steve'
+        'content': 'This is the profile page for Steve',
+        'disabled': false,
       }, {
         'env': 'NodeJs',
         'link': 'https://thechecklist.herokuapp.com/',
-        'content': 'MEAN(MongoDB ExpressJS AngularJS NodeJS) stack. This is only a testing prototype of an TODO List application'
+        'content': 'MEAN(MongoDB ExpressJS AngularJS NodeJS) stack. This is only a testing prototype of an TODO List application',
+        'disabled': false,
       }, {
         'env': 'Django',
         'link': 'https://noteweb.herokuapp.com/',
-        'content': 'This is a simple note taking application with authentication.'
+        'content': 'This is a simple note taking application with authentication.',
+        'disabled': true,
       }, {
         'env': 'Rail',
         'link': 'https://infiloopmusic.herokuapp.com/',
-        'content': 'A simple web application using Rails and prestige sql'
+        'content': 'A simple web application using Rails and prestige sql',
+        'disabled': true,
       },
       {
         'env': 'JAVA',
         'link': 'http://targetanalysis.steveqiu.com',
-        'content': 'MongoDB Spring ReactJS App for financial statement query. Due price hike, I stopped subscription. Cached: MCD, BA, MAR, LVS, AAPL, WYNN'
+        'content': 'MongoDB Spring ReactJS App for financial statement query. Due price hike, I stopped subscription. Cached: MCD, BA, MAR, LVS, AAPL, WYNN',
+        'disabled': false,
       }]
     }
   },
@@ -68,5 +79,10 @@ export default {
 }
 .content-box{
  padding-bottom: 60px;
+}
+
+.disabled{
+  // pointer-events: none;
+  cursor: not-allowed;
 }
 </style>
