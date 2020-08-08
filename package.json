@@ -4,17 +4,17 @@
   "private": true,
   "scripts": {
     "start": "node ./server.js",
-    "server": "DEBUG=vuejs:* nodemon ./server.js",
+    "server": "nodemon ./server.js",
+    "dev": "webpack --watch --hot --mode development",
     "docker": "docker build -t sdeq/vue-practice . && docker run -p 49160:8080 -d sdeq/vue-practice",
-    "dev": "webpack-dev-server --watch --hot --mode development",
-    "prd": "webpack --mode production"
+    "build": "webpack --mode production"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.3",
-    "ejs": "~2.5.7",
-    "express": "~4.16.0",
-    "http-errors": "~1.6.2",
-    "morgan": "~1.9.0",
+    "cookie-parser": "^1.4.5",
+    "ejs": "^2.5.7",
+    "express": "^4.16.0",
+    "http-errors": "^1.6.2",
+    "morgan": "^1.9.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {
@@ -24,14 +24,13 @@
     "css-loader": "^2.1.1",
     "file-loader": "^3.0.1",
     "html-loader": "^0.5.5",
-    "less": "^3.9.0",
+    "less": "^3.12.2",
     "less-loader": "^4.1.0",
-    "vue-loader": "^15.7.0",
-    "vue-router": "^3.0.2",
+    "vue-loader": "^15.9.3",
+    "vue-router": "^3.4.2",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.10",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.2.1"
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.0"
   }
 }

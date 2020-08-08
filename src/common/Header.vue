@@ -10,20 +10,7 @@
 </template>
 <script>
 export default {
-  name:'header',
-  data:()=>{
-    return{
-
-    };
-  },
-  computed: {},
-  methods: {
-    goBack () {
-      window.history.length > 1
-        ? this.$router.go(-1)
-        : this.$router.push('/')
-    }
-  }
+  name:'header'
 }
 </script>
 <style lang="less" scoped>

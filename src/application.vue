@@ -1,7 +1,9 @@
 <template>
    <div id="app">
       <header>
-
+         <li><router-link class="btn-outline" to="/">Home</router-link></li>
+         <li><router-link class="btn-outline" to="/projects">Web Projects</router-link></li>
+         <li><router-link class="btn-outline" to="/contact">Contact</router-link></li>
       </header>
       <p>
         <router-link class="btn-outline" to="/">Home</router-link>
@@ -14,7 +16,7 @@
    </div>
 </template>
 <script>
-import Header from '../common/Header.vue';
+import Header from './common/Header.vue';
 
 export default {
    name:'Application',
