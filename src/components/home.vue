@@ -1,9 +1,14 @@
 <template>
-   <h3>This is a VueJS Webpack NodeJS Project. It is used as a directory for Steve's website.</h3>
+<div>
+  <h1>Steve's Web Directory</h1>
+  <h3>This is a VueJS Webpack NodeJS Project. It is used as a directory for Steve's website.</h3>
+</div>
 </template>
 <script>
-  // Home.vue
+  // sky iceberg cliff edge forest parallax
+
 export default {
+  name:'home',
   computed: {
     // username () {
     //   // We will see what `params` is shortly
@@ -21,6 +26,12 @@ export default {
 </script>
 
 <style lang="less" scoped>
+
+h1{
+   text-align: center;
+   font-size: 3em;
+}
+
 h3{
   padding: 40px;
   padding-top: 0;

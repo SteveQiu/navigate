@@ -1,7 +1,8 @@
 <template>
-  <a href="https://www.linkedin.com/in/qsteve/" target="_blank">
-    <h3>https://www.linkedin.com/in/qsteve/</h3>
-  </a>
+<div class="container">
+  <h1>Linkedin</h1>
+  <h3><a href="https://www.linkedin.com/in/qsteve/" target="_blank">https://www.linkedin.com/in/qsteve/</a></h3>
+</div>
 </template>
 <script>
 
@@ -22,7 +23,10 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-h3{
+.container{
+  padding: 40px;
+}
+h1, h3{
   text-align: center;
 }
 </style>

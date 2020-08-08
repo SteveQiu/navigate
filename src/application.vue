@@ -1,19 +1,14 @@
 <template>
-   <div id="app">
-      <header>
-         <li><router-link class="btn-outline" to="/">Home</router-link></li>
-         <li><router-link class="btn-outline" to="/projects">Web Projects</router-link></li>
-         <li><router-link class="btn-outline" to="/contact">Contact</router-link></li>
-      </header>
-      <p>
-        <router-link class="btn-outline" to="/">Home</router-link>
-        <router-link class="btn-outline" to="/projects">Web Projects</router-link>
-        <router-link class="btn-outline" to="/contact">Contact</router-link>
-      </p>
-      <h1>Steve's Web Directory</h1>
-      <!-- route outlet -->
+<div id="app">
+   <Header>
+      <router-link to="/">Home</router-link>
+      <router-link to="/projects">Projects</router-link>
+      <router-link to="/contact">Contact</router-link>
+   </Header>
+   <div>
       <router-view></router-view>
    </div>
+</div>
 </template>
 <script>
 import Header from './common/Header.vue';
@@ -31,29 +26,17 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-h1{
-   text-align: center;
-   font-size: 3em;
+:root {
+  --font-color: #484848;
 }
-.btn-outline{
-   text-align: center;
-   margin: 30px;
-   border: solid #316c94 3px;
-   padding: 7px 24px;
-   border-radius: 8px;
-   color: #316c94;
+#app{
+   margin-top: 60px;
+   width: 100%;
 }
-.router-link-exact-active{
-   color: white;
-   background-color: #316c94;
-}
-p{
-   text-align: center;
-   margin-bottom: 40px;
-}
-@media (max-width: 600px) {
-  p {
-    display: grid;
-  }
+</style>
+<style>
+body{
+   color: var(--font-color);
+   font-family: Arial, Helvetica, sans-serif;
 }
 </style>

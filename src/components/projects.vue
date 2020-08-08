@@ -1,18 +1,18 @@
 <template>
-   <div class="content-box">
-      <a 
-        v-for="site in sites" 
-        :key="site.env" 
-        :href="site.link" 
-        target="_blank"
-        :class="{disabled:site.disabled}"
-      >
-        <div class="box">
-          <div class="title">{{site.env}}</div>
-          <div class="description">{{site.content}}</div>
-        </div>
-      </a>
-   </div>
+<div class="container">
+  <a 
+    v-for="site in sites" 
+    :key="site.env" 
+    :href="site.link" 
+    target="_blank"
+    :class="{disabled:site.disabled}"
+  >
+    <div class="box">
+      <div class="title">{{site.env}}</div>
+      <div class="description">{{site.content}}</div>
+    </div>
+  </a>
+</div>
 </template>
 <script>
   // Home.vue
@@ -47,17 +47,17 @@ export default {
       }]
     }
   },
-  methods: {
-    goBack () {
-      window.history.length > 1
-        ? this.$router.go(-1)
-        : this.$router.push('/')
-    }
-  }
+  methods: {}
 }
 </script>
 
 <style lang="less" scoped>
+.container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 .box{
   margin: 14px;
   width: 200px;
@@ -75,9 +75,6 @@ export default {
   text-align: center;
   font-size: x-large;
   font-family: sans-serif;
-}
-.content-box{
- padding-bottom: 60px;
 }
 
 .disabled{
