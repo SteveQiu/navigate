@@ -24,27 +24,26 @@ export default {
         'link': 'http://qylsteve.herokuapp.com',
         'content': 'This is the profile page for Steve',
         'disabled': false,
-      }, {
-        'env': 'NodeJs',
-        'link': 'https://thechecklist.herokuapp.com/',
-        'content': 'MEAN(MongoDB ExpressJS AngularJS NodeJS) stack. This is only a testing prototype of an TODO List application',
-        'disabled': false,
-      }, {
-        'env': 'Django',
-        'link': 'https://noteweb.herokuapp.com/',
-        'content': 'This is a simple note taking application with authentication.',
-        'disabled': true,
-      }, {
-        'env': 'Rail',
-        'link': 'https://infiloopmusic.herokuapp.com/',
-        'content': 'A simple web application using Rails and prestige sql',
-        'disabled': true,
-      },
-      {
+      },{
         'env': 'JAVA',
         'link': 'http://targetanalysis.steveqiu.com',
         'content': 'MongoDB Spring ReactJS App for financial statement query. Due price hike, I stopped subscription. Cached: MCD, BA, MAR, LVS, AAPL, WYNN',
         'disabled': false,
+      }, {
+        'env': 'NodeJs',
+        'link': 'https://thechecklist.herokuapp.com/',
+        'content': '(Discontinued) MEAN(MongoDB ExpressJS AngularJS NodeJS) stack. This is only a testing prototype of an TODO List application',
+        'disabled': true,
+      }, {
+        'env': 'Django',
+        'link': 'https://noteweb.herokuapp.com/',
+        'content': '(Discontinued) This is a simple note taking application with authentication.',
+        'disabled': true,
+      }, {
+        'env': 'Rail',
+        'link': 'https://infiloopmusic.herokuapp.com/',
+        'content': '(Discontinued) A simple web application using Rails and prestige sql',
+        'disabled': true,
       }]
     }
   },
