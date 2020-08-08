@@ -32,7 +32,7 @@ export default {
       }, {
         'env': 'NodeJs',
         'link': 'https://thechecklist.herokuapp.com/',
-        'content': '(Discontinued) MEAN(MongoDB ExpressJS AngularJS NodeJS) stack. This is only a testing prototype of an TODO List application',
+        'content': '(Discontinued) MEAN(MongoDB ExpressJS AngularJS NodeJS) stack. This is of an TODO List application for personal/team goal management',
         'disabled': true,
       }, {
         'env': 'Django',
