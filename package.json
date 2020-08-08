@@ -3,15 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "server": "DEBUG=vuejs:* nodemon ./bin/www",
+    "start": "node ./server.js",
+    "server": "DEBUG=vuejs:* nodemon ./server.js",
     "docker": "docker build -t sdeq/vue-practice . && docker run -p 49160:8080 -d sdeq/vue-practice",
     "dev": "webpack-dev-server --watch --hot --mode development",
     "prd": "webpack --mode production"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
     "ejs": "~2.5.7",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",

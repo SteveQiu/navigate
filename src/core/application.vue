@@ -1,26 +1,32 @@
 <template>
    <div id="app">
-      <h1>Steve's Web Directory</h1>
+      <header>
+
+      </header>
       <p>
         <router-link class="btn-outline" to="/">Home</router-link>
         <router-link class="btn-outline" to="/projects">Web Projects</router-link>
         <router-link class="btn-outline" to="/contact">Contact</router-link>
       </p>
+      <h1>Steve's Web Directory</h1>
       <!-- route outlet -->
       <router-view></router-view>
    </div>
 </template>
 <script>
-   import Vue from 'vue';
+import Header from '../common/Header.vue';
 
-   export default {
-      name:'Application',
-      data: ()=>{
-           return{
-               hello:'Vue app'
-           };
-       }
-   }
+export default {
+   name:'Application',
+   components:{
+      Header,
+   },
+   data: ()=>{
+         return{
+            hello:'Vue app'
+         };
+      }
+}
 </script>
 <style lang="less" scoped>
 h1{
