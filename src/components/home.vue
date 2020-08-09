@@ -1,11 +1,12 @@
 <template>
 <div class="container">
-  <div class="img img-sky rellax" data-rellax-speed="4"></div>
-  <div class="img img-ground rellax" data-rellax-speed="2"></div>
-  <div class="img img-cliff rellax" data-rellax-speed="1"></div>
-  <div></div>
-  <!-- <h1>Steve's Web Directory</h1> -->
-  <!-- <h3>This is a VueJS Webpack NodeJS Project. It is used as a directory for Steve's website.</h3> -->
+  <div class="img img-city rellax" data-rellax-speed="6"></div>
+  <div class="img img-platform rellax" data-rellax-speed="1"></div>
+  <div class="img img-title rellax" data-rellax-speed="-3">WELCOME!</div>
+  <div class="parallax-fillter"></div>
+  <h1>Steve's Web Directory</h1>
+  <h3>This is a VueJS Webpack NodeJS Project. It is used as a directory for Steve's website.</h3>
+  <div class="parallax-fillter"></div>
 </div>
 </template>
 <script>
@@ -57,19 +58,27 @@ h3{
   position:absolute;
 }
 
-.img-sky{
-  background-image: url('/img/sky.jpg');
-  min-height: 140vh;
+.img-city{
+  background-image: url('/img/night-city.png');
+  top: 0%;
+  min-height: 110vh;
+}
+.img-title{
+  text-align: center;
+  font-size: 4em;
+  top: 50%;
+  color: white;
+  font-weight: bold;
+}
+.img-platform{
+  background-image: url('/img/platform.png');
+  position:absolute;
   top: 0%;
 }
-.img-ground{
-  background-image: url('/img/ground.png');
-  top: 65%;
-}
-.img-cliff{
-  background-image: url('/img/cliff.png');
-  position:absolute;
-  top: 65%;
+
+.parallax-fillter{
+  width: 100%;
+  min-height: 100vh;
 }
 
 
