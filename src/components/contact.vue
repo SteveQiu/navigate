@@ -82,9 +82,11 @@ h1, h3{
 }
 .img3>.text{
   position: absolute;
-  right: 30%;
+  text-align: center;
+  width:100%;
   top: 40%;
   font-size: 3em;
+  font-weight: bold;
   color: white;
 }
 
