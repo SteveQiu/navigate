@@ -2,44 +2,27 @@
 <div class="content">
   <!-- <h1>Steve's Web Directory</h1> -->
   <!-- <h3>This is a VueJS Webpack NodeJS Project. It is used as a directory for Steve's website.</h3> -->
-  <div class="img1">
-    <div class="text">
-      <div class="border"><span>Parallax website</span></div>
-    </div>
-  </div>
+  <div class="img img-sky rellax" data-rellax-speed="4"></div>
+  <div class="img img-ground rellax" data-rellax-speed="2"></div>
+  <div class="img img-cliff rellax" data-rellax-speed="1"></div>
 
-  <section class="section section-light">
+  <!-- <section class="section section-light">
     <h2>Section 1</h2>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum amet enim numquam ab ex similique labore dolor inventore iste est, vitae assumenda dolorum molestiae repellat eveniet magnam tenetur quasi sed.</p>
   </section>
 
-  <div class="img2">
-    <div class="text">
-      <div class="border"><span>Parallax website</span></div>
-    </div>
-  </div>
 
   <section class="section section-dark">
     <h2>Section 2</h2>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
   </section>
 
-  <div class="img3">
-    <div class="text">
-      <div class="border"><span>Parallax website</span></div>
-    </div>
-  </div>
 
   <section class="section section-dark">
     <h2>Section 3</h2>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-  </section>
+  </section> -->
 
-  <div class="img4">
-    <div class="text">
-      <div class="border"><span>Parallax website</span></div>
-    </div>
-  </div>
 
 </div>
 </template>
@@ -50,7 +33,6 @@ export default {
   name:'home',
   mounted: function () {
     var rellax = new Rellax('.rellax', {
-      speed: -2,
       center: false,
       wrapper: null,
       round: true,
@@ -83,4 +65,30 @@ h3{
   color: #4c4c4c;
   text-align: center;
 }
+
+.img{
+  width: 100%;
+  min-height: 100vh;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:absolute;
+}
+
+.img-sky{
+  background-image: url('/img/sky.jpg');
+  min-height: 140vh;
+  top: 0%;
+}
+.img-ground{
+  background-image: url('/img/ground.png');
+  top: 65%;
+}
+.img-cliff{
+  background-image: url('/img/cliff.png');
+  position:absolute;
+  top: 65%;
+}
+
+
 </style>
