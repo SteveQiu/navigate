@@ -48,6 +48,7 @@ export default {
   height: 60px;
   width: 100%;
   background: linear-gradient(white 90%, #ddd 91%, transparent 100%) bottom;
+  z-index: 9;
 }
 .logo{
   float: left;
@@ -72,13 +73,9 @@ a{
   font-size: 22px;
   margin: 10px 7px;
   display: inline-block;
-  color: var(--font-color);
   text-decoration: none;
   width: inherit;
   box-shadow: 0 1px transparent;
-}
-a:active{
-  color: var(--font-color);
 }
 a:hover{
   color: #838383;

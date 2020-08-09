@@ -36,7 +36,10 @@ export default {
 </style>
 <style>
 body{
-   color: var(--font-color);
+   color: #484848;
    font-family: Arial, Helvetica, sans-serif;
+}
+a,a:active{
+   color: #484848;
 }
 </style>

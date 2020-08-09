@@ -8,7 +8,9 @@
     :class="{disabled:site.disabled}"
   >
     <div class="box">
-      <div class="title">{{site.env}}</div>
+      <div class="title">
+        <table><tr><td>{{site.env}}</td></tr></table>
+      </div>
       <div class="description">{{site.content}}</div>
     </div>
   </a>
@@ -22,7 +24,7 @@ export default {
       sites:[{
         'env': 'PHP',
         'link': 'http://qylsteve.herokuapp.com',
-        'content': 'This is the profile page for Steve',
+        'content': 'Hurray! More profile website. This is another profile with details of other projects from the past',
         'disabled': false,
       },{
         'env': 'JAVA',
@@ -52,7 +54,12 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.disabled{
+  // pointer-events: none;
+  cursor: not-allowed;
+}
 .container{
+  padding: 50px 0;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -62,23 +69,46 @@ export default {
   margin: 14px;
   width: 200px;
   height: 250px;
-  border: solid #316c94 8px;
-  border-radius: 5px;
-  padding: 7px 24px;
-  color: #316c94;
-  float: left;
-}
-.title{
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-weight: bold;
-  text-align: center;
-  font-size: x-large;
-  font-family: sans-serif;
+  border: solid #484848 8px;
+  position:relative;
 }
 
-.disabled{
-  // pointer-events: none;
-  cursor: not-allowed;
+.title{
+  position:absolute;
+  display: block;
+  width:100%;
+  height: 100%;
+  font-weight: bold;
+  font-size: 2em;
+  background-color: white;
+  margin: auto;
+  text-align: center;
+  table{
+    width: 100%;
+    height: 100%;
+  }
+  td{
+    vertical-align: center;
+  }
+
+  left:0;
+  transform: scaleX(1);
+  transition: transform 0.38s ease-in-out, left 0.38s ease-in-out;
+}
+a:hover .title {
+  left: 100px;
+  transform: scaleX(0);
+}
+
+.description{
+  display: flex;
+  width:100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #484848;
+  color: white;
+  z-index: 0;
 }
 </style>
