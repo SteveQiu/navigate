@@ -38,6 +38,7 @@ export default {
 body{
    color: #484848;
    font-family: Arial, Helvetica, sans-serif;
+   margin:0;
 }
 a,a:active{
    color: #484848;
