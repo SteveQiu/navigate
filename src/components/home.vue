@@ -1,8 +1,10 @@
 <template>
 <div class="container">
   <welcome-banner/>
-  <h1>Steve's Web Directory</h1>
-  <h3>This is a VueJS Webpack NodeJS Project. It is used as a directory for Steve's website.</h3>
+  <div class="directory-description">
+    <h1>Steve's Web Directory</h1>
+    <h3>This is a VueJS Webpack NodeJS Project. It is used as a directory for Steve's website.</h3>
+  </div>
   <encouragement-banner/>
 </div>
 </template>
@@ -50,5 +52,11 @@ h3{
   padding-top: 0;
   color: #4c4c4c;
   text-align: center;
+}
+.directory-description{
+  padding: 50px;
+  position: relative;
+  background: white;
+  z-index: 1;
 }
 </style>

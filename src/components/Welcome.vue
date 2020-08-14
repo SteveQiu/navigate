@@ -1,9 +1,9 @@
 <template>
-  <div>
-        <div class="img img-city rellax" data-rellax-speed="6"></div>
-        <div class="img img-platform rellax" data-rellax-speed="1"></div>
-        <div class="img img-title rellax" data-rellax-speed="-3">WELCOME!</div>
-        <div class="parallax-fillter"></div>
+  <div class="banner-container">
+    <div class="img img-city rellax" data-rellax-speed="3"></div>
+    <div class="img img-platform"></div>
+    <div class="img img-title rellax" data-rellax-speed="-4">WELCOME!</div>
+    <div class="parallax-fillter"></div>
   </div>
 </template>
 
@@ -14,7 +14,10 @@ export default {
 </script>
 
 <style>
-
+.banner-container{
+  position: relative;
+  z-index: 0;
+}
 .img{
   width: 100%;
   min-height: 100vh;
@@ -27,7 +30,7 @@ export default {
 .img-city{
   background-image: url('/img/night-city.png');
   top: 0%;
-  min-height: 110vh;
+  min-height: 120vh;
 }
 .img-title{
   text-align: center;
@@ -44,6 +47,6 @@ export default {
 
 .parallax-fillter{
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 60px);
 }
 </style>
