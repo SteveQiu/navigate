@@ -54,7 +54,7 @@ h3{
   text-align: center;
 }
 .directory-description{
-  padding: 50px;
+  padding: 80px;
   position: relative;
   background: white;
   z-index: 1;
