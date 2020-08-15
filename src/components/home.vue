@@ -2,7 +2,7 @@
 <div class="container">
   <welcome-banner/>
   <Introduction/>
-  <encouragement-banner/>
+  <!-- <encouragement-banner/> -->
 </div>
 </template>
 <script>
