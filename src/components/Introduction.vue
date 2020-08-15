@@ -2,17 +2,17 @@
   <div class="directory-description">
     <h1>Steve's Web Directory</h1>
     <h3>It is a directory for Steve's website.</h3>
-      <div class="flex" ref="box1">
+      <div class="flex">
         <div class="box mouse"></div>
-        <table class="box" @click="toggleBox1=!toggleBox1">
-        <transition name="slide-fade">
-          <td v-if="toggleBox1">Design a page with minimualist style</td>
-        </transition>
+        <table class="box" ref="box1">
+          <transition name="slide-fade">
+            <td v-if="toggleBox1">Design a page with minimualist style</td>
+          </transition>
         </table>
       </div>
-      <div class="flex inverted-flex" ref="box2">
+      <div class="flex inverted-flex">
         <div class="box keyboard"></div>
-        <table class="box">
+        <table class="box" ref="box2">
           <transition name="slide-fade">
             <td v-show="toggleBox2">Incorporate Project VueJS, Webpack, and NodeJS</td>
           </transition>
@@ -118,12 +118,12 @@
     flex-direction: row-reverse;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 800px) {
     .flex {
       flex-wrap: wrap;
     }
 
-    td {
+    table {
       height: auto !important;
     }
   }
