@@ -46,7 +46,6 @@
 
       this.observer.observe(this.$refs.box1)
       this.observer.observe(this.$refs.box2)
-      console.log(this.$refs.des1);
     },
     methods:{
       updateDisplay(entries, observer) {
