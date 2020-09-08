@@ -24,7 +24,7 @@ export default {
       sites:[{
         'env': 'PHP',
         'link': 'http://qylsteve.herokuapp.com',
-        'content': 'Hurray! More profile website. This is another profile with details of other projects from the past',
+        'content': 'Profile website. This is another profile with details of other projects from the past',
         'disabled': false,
       },{
         'env': 'JAVA',
