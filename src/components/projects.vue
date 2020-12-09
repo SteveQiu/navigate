@@ -3,7 +3,7 @@
   <a 
     v-for="site in sites" 
     :key="site.env" 
-    :href="site.link" 
+    :href="{(disabled:site.disabled? '':site.link)}" 
     target="_blank"
     :class="{disabled:site.disabled}"
   >
