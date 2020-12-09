@@ -3,7 +3,7 @@
   <a 
     v-for="site in sites" 
     :key="site.env" 
-    :href="{(disabled:site.disabled? '':site.link)}" 
+    :href="site.link" 
     target="_blank"
     :class="{disabled:site.disabled}"
   >
@@ -33,7 +33,7 @@ export default {
         'disabled': false,
       }, {
         'env': 'NodeJs',
-        'link': 'https://thechecklist.herokuapp.com/',
+        'link': '',//'https://thechecklist.herokuapp.com/',
         'content': '(Discontinued) MEAN(MongoDB ExpressJS AngularJS NodeJS) stack. This is of an TODO List application for personal/team goal management',
         'disabled': true,
       }, {
