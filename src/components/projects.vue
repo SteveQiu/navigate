@@ -29,13 +29,13 @@ export default {
       },{
         'env': 'JAVA',
         'link': 'http://targetanalysis.steveqiu.com',
-        'content': 'MongoDB Spring ReactJS App for financial statement query. Due price hike, I stopped subscription. Cached: MCD, BA, MAR, LVS, AAPL, WYNN',
+        'content': '(Discontinued) MongoDB, Springboot, ReactJS, Intrinio Financial Service. App for financial statement query. Due to price hike, service unsubscribed',
         'disabled': false,
       }, {
         'env': 'NodeJs',
         'link': 'https://thechecklist.herokuapp.com/',
-        'content': 'MEAN(MongoDB ExpressJS AngularJS NodeJS) stack. This is of an TODO List application for personal/team goal management',
-        'disabled': false,
+        'content': '(Discontinued) MEAN(MongoDB ExpressJS AngularJS NodeJS) stack. This is of an TODO List application for personal/team goal management',
+        'disabled': true,
       }, {
         'env': 'Django',
         'link': 'https://noteweb.herokuapp.com/',
