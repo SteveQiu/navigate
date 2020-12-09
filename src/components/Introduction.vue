@@ -14,7 +14,7 @@
         <div class="box keyboard"></div>
         <table class="box" ref="box2">
           <transition name="slide-fade">
-            <td v-show="toggleBox2">Incorporate Project VueJS, Webpack, and NodeJS</td>
+            <td v-show="toggleBox2">Created with VueJS, Webpack, and NodeJS</td>
           </transition>
         </table>
       </div>
