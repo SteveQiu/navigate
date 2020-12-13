@@ -2,6 +2,7 @@
     <div class="encouragement-container">
         <div class="phone-container" ref="phoneContainer">
             <img class="phone" src="/img/phone.png" alt="" ref="phone" v-bind:style="phoneStyleObject">
+            <div class="inst">Scroll Down</div>
             <div class="ppt">
                 <div>Thank you</div>
             </div>
@@ -115,6 +116,20 @@
     @media only screen and (max-width: 800px) {
         .phone {
             transform: rotate(0deg);
+        }
+    }
+
+    .inst{
+        z-index: 3;
+        color: white;
+        position: absolute;
+        top:28vh;
+        text-align: center;
+        font-size: 2em;
+        width: 100vw;
+        
+        div{
+            margin: 50px 0;
         }
     }
 
