@@ -12,7 +12,7 @@
 </template>
 <script>
 export default {
-  name:'Header',
+  name:'HeaderContainer',
   data:function() {
     return{
       windowWidth: window.innerWidth,

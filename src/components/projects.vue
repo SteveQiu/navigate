@@ -3,8 +3,8 @@
   <a 
     v-for="site in sites" 
     :key="site.env" 
-    :href="site.link" 
-    target="_blank"
+    :href="`${site.disabled? 'javascript:;': site.link}`" 
+    :target="`${site.disabled? '_self': '_blank'}`"
     :class="{disabled:site.disabled}"
   >
     <div class="box">
@@ -19,18 +19,19 @@
 <script>
   // Home.vue
 export default {
+  name: "ProjectPage",
   data: ()=>{
     return {
       sites:[{
         'env': 'PHP',
-        'link': 'http://qylsteve.herokuapp.com',
+        'link': 'http://profile.steveqiu.com',
         'content': 'Profile website. This is another profile with details of other projects from the past',
         'disabled': false,
       },{
         'env': 'JAVA',
         'link': 'http://targetanalysis.steveqiu.com',
         'content': '(Discontinued) MongoDB, Springboot, ReactJS, Intrinio Financial Service. App for financial statement query. Due to price hike, service unsubscribed',
-        'disabled': false,
+        'disabled': true,
       }, {
         'env': 'NodeJs',
         'link': '',//'https://thechecklist.herokuapp.com/',
@@ -39,13 +40,13 @@ export default {
       }, {
         'env': 'Django',
         'link': 'https://noteweb.herokuapp.com/',
-        'content': 'This is a simple note taking application with authentication.',
-        'disabled': false,
+        'content': '(Discontinued) This is a simple note taking application with authentication.',
+        'disabled': true,
       }, {
         'env': 'Rail',
         'link': 'https://infiloopmusic.herokuapp.com/',
-        'content': 'A simple web application using Rails and prestige sql',
-        'disabled': false,
+        'content': '(Discontinued) A simple web application using Rails and prestige sql',
+        'disabled': true,
       }]
     }
   },

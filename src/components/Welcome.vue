@@ -28,7 +28,7 @@ export default {
 }
 
 .img-city{
-  background-image: url('/img/night-city.png');
+  background-image: url('../assets/img/night-city.png');
   top: 0%;
   min-height: 120vh;
 }
@@ -40,7 +40,7 @@ export default {
   font-weight: bold;
 }
 .img-platform{
-  background-image: url('/img/platform.png');
+  background-image: url('../assets/img/platform.png');
   position:absolute;
   top: 0%;
 }

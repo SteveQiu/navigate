@@ -32,6 +32,7 @@
 <script>
 
 export default {
+  name:"ContactPage",
   data:()=>{
     return{
 
@@ -56,7 +57,7 @@ h1, h3{
 }
 
 .img1{
-  background-image: url('/img/computer.jpg');
+  background-image: url('../assets/img/computer.jpg');
   min-height: calc( 100vh - 60px);
 }
 .img1>.text{
@@ -66,7 +67,7 @@ h1, h3{
   font-size: 2em;
 }
 .img2{
-  background-image: url('/img/stairs.jpg');
+  background-image: url('../assets/img/stairs.jpg');
   min-height: 100vh;
 }
 .img2>.text{
@@ -77,7 +78,7 @@ h1, h3{
   color: #939393;
 }
 .img3{
-  background-image: url('/img/city.jpg');
+  background-image: url('../assets/img/city.jpg');
   min-height: 100vh;
 }
 .img3>.text{

@@ -10,9 +10,9 @@ Vue.config.productionTip = false;
 new Vue({
     el: '#app',
     router: new VueRouter(route),
-    template: '<app/>',
-    components: {
-        app,
-    }
-    // render: render => render(application),
-})  
+    // template: '<app/>',
+    // components: {
+    //     app,
+    // }
+    render: render => render(app),
+}).$mount('#app')

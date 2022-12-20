@@ -14,7 +14,7 @@
 import Header from './common/Header.vue';
 
 export default {
-   name:'Application',
+   name:'ApplicationEntry',
    components:{
       Header,
    },

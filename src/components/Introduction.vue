@@ -23,17 +23,19 @@
 
 <script>
   export default {
-    name: 'Introduction',
+    name: 'IntroductionPage',
     data:function () {
       return {
         toggleBox1:false,
         toggleBox2:false,
-        observer:null
+        observer:null,
+        observedElm1: null,
+        observedElm2: null,
       }
     },
     destroyed() {
-      this.observer.unobserve(this.$refs.box1)
-      this.observer.unobserve(this.$refs.box2)
+      this.observer.unobserve(this.observedElm1);
+      this.observer.unobserve(this.observedElm2);
     },
     mounted: function () {
       let options = {
@@ -43,18 +45,20 @@
       };
 
       this.observer = new IntersectionObserver(this.updateDisplay, options);
+      this.observedElm1=this.$refs.box1;
+      this.observedElm2=this.$refs.box2;
 
-      this.observer.observe(this.$refs.box1)
-      this.observer.observe(this.$refs.box2)
+      this.observer.observe(this.observedElm1);
+      this.observer.observe(this.observedElm2);
     },
     methods:{
-      updateDisplay(entries, observer) {
+      updateDisplay(entries) {
         entries.forEach((entry) => {
-          if (entry.target==this.$refs.box1) {
+          if (entry.target==this.observedElm1) {
             // console.log('box1');
             this.toggleBox1=entry.intersectionRatio>0.5
           }
-          else if (entry.target==this.$refs.box2) {
+          else if (entry.target==this.observedElm2) {
             // console.log('box2');
             this.toggleBox2=entry.intersectionRatio>0.5
           }
@@ -128,14 +132,14 @@
   }
 
   .mouse {
-    background-image: url('/img/mouse.png');
+    background-image: url('../assets/img/mouse.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position-y: center;
   }
 
   .keyboard {
-    background-image: url('/img/keyboard.png');
+    background-image: url('../assets/img/keyboard.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position-y: center;

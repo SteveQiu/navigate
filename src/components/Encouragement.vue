@@ -15,10 +15,11 @@
 
 <script>
     export default {
-        name: 'Encouragement',
+        name: 'EncouragementPage',
         data: function () {
             return {
                 observer: null,
+                observedElm: null,
                 phoneWidth: '200px',
                 phoneHeight: '400px',
                 phoneLeft: `${(window.innerWidth-200)/2}px`,
@@ -38,7 +39,7 @@
             }
         },
         destroyed() {
-            this.phoneObserver.unobserve(this.$refs.phoneContainer)
+            this.phoneObserver.unobserve(this.observedElm);
         },
         mounted: function () {
             this.setupPhoneObserver()
@@ -54,10 +55,11 @@
                     rootMargin: "0px",
                     threshold: threshold
                 };
+                this.observedElm = this.$refs.phoneContainer;
                 this.phoneObserver = new IntersectionObserver(this.updatePhoneSize, options);
-                this.phoneObserver.observe(this.$refs.phoneContainer)
+                this.phoneObserver.observe(this.observedElm);
             },
-            updatePhoneSize(entries, observer) {
+            updatePhoneSize(entries) {
                 entries.forEach((entry) => {
                     if (entry.target == this.$refs.phoneContainer && entry.boundingClientRect.top < 0) {
                         console.log(entry);

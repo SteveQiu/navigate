@@ -12,14 +12,14 @@ import EncouragementBanner from './Encouragement'
 import Introduction from './Introduction'
 
 export default {
-  name:'home',
+  name:'HomePage',
   components:{
     WelcomeBanner,
     EncouragementBanner,
     Introduction,
   },
   mounted: function () {
-    var rellax = new Rellax('.rellax', {
+    new Rellax('.rellax', {
       center: false,
       wrapper: null,
       round: true,
