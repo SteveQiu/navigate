@@ -1,51 +1,54 @@
 <template>
   <div class="banner-container">
-    <div class="img img-city rellax" data-rellax-speed="3"></div>
+    <div class="img img-city rellax" data-rellax-speed="5"></div>
     <div class="img img-platform"></div>
-    <div class="img img-title rellax" data-rellax-speed="-4">WELCOME!</div>
+    <div class="img img-title rellax" data-rellax-speed="-5">WELCOME!</div>
     <div class="parallax-fillter"></div>
   </div>
 </template>
 
 <script>
 export default {
-    name:'WelcomeBanner'
+  name: 'WelcomeBanner'
 }
 </script>
 
 <style>
-.banner-container{
+.banner-container {
   position: relative;
   z-index: 0;
 }
-.img{
+
+.img {
   width: 100%;
   min-height: 100vh;
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: cover;
-  position:absolute;
+  position: absolute;
 }
 
-.img-city{
+.img-city {
   background-image: url('../assets/img/night-city.png');
   top: 0%;
   min-height: 120vh;
 }
-.img-title{
+
+.img-title {
   text-align: center;
   font-size: 4em;
   top: 50%;
   color: white;
   font-weight: bold;
 }
-.img-platform{
+
+.img-platform {
   background-image: url('../assets/img/platform.png');
-  position:absolute;
+  position: absolute;
   top: 0%;
 }
 
-.parallax-fillter{
+.parallax-fillter {
   width: 100%;
   min-height: calc(100vh - 60px);
 }
