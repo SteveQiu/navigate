@@ -24,7 +24,7 @@ export default {
     return {
       sites:[{
         'env': 'PHP',
-        'link': 'http://profile.steveqiu.com',
+        'link': 'http://steveqiu.github.io/personal-web/',
         'content': 'Profile website. This is another profile with details of other projects from the past',
         'disabled': false,
       },{
