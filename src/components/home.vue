@@ -1,21 +1,21 @@
 <template>
-<div class="container">
-  <welcome-banner/>
-  <Introduction/>
-  <encouragement-banner/>
-</div>
+  <div class="container">
+    <welcome-banner />
+    <Introduction />
+    <phone-container />
+  </div>
 </template>
 <script>
 let Rellax = require('rellax');
 import WelcomeBanner from './Welcome'
-import EncouragementBanner from './Encouragement'
+import PhoneContainer from './PhoneContainer'
 import Introduction from './Introduction'
 
 export default {
-  name:'HomePage',
-  components:{
+  name: 'HomePage',
+  components: {
     WelcomeBanner,
-    EncouragementBanner,
+    PhoneContainer,
     Introduction,
   },
   mounted: function () {
@@ -28,7 +28,7 @@ export default {
     });
   },
   methods: {
-    goBack () {
+    goBack() {
       window.history.length > 1
         ? this.$router.go(-1)
         : this.$router.push('/')
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.container{
-  height:100%;
+.container {
+  height: 100%;
 }
 </style>

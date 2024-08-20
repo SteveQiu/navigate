@@ -56,7 +56,6 @@ export default {
 
 <style lang="less" scoped>
 .disabled{
-  // pointer-events: none;
   cursor: not-allowed;
 }
 .container{
@@ -65,6 +64,8 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  height: calc(100vh - 60px);
+  align-items: center;
 }
 .box{
   margin: 14px;

@@ -1,23 +1,41 @@
 <template>
-    <div class="encouragement-container">
-        <div class="phone-container" ref="phoneContainer">
-            <img class="phone" src="../assets/img/phone.png" alt="" ref="phone" v-bind:style="phoneStyleObject">
-            <div class="inst">Scroll Down</div>
-            <div class="ppt">
-                <div>Thank you</div>
+    <div class="encouragement-container" ref="phoneContainer">
+        <img class="phone" src="../assets/img/phone.png" alt="" ref="phone" v-bind:style="phoneStyleObject">
+        <div class="slide">
+            <div class="text">
+                Scroll Down
+            </div>
+            <div style="position:absolute;transform: rotate(40deg);">
+                <LoremText />
             </div>
         </div>
-        <table class="end">
-            <tr>
-                <td>THE END</td>
-            </tr>
-        </table>
+        <div class="slide">
+            <div class="text">
+                Thank you
+            </div>
+            <div style="position:absolute;transform: rotate(-40deg);">
+                <LoremText />
+            </div>
+        </div>
+        <div class="slide">
+            <div class="text">
+                Have a nice day!
+            </div>
+            <div style="position:absolute;transform: rotate(40deg);">
+                <LoremText />
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
+import LoremText from './LoremText.vue';
+
 export default {
-    name: 'EncouragementPage',
+    name: 'PhoneContainer',
+    components: {
+        LoremText,
+    },
     data: function () {
         return {
             observer: null,
@@ -63,18 +81,23 @@ export default {
         },
         updatePhoneSize(entries) {
             entries.forEach((entry) => {
-                if (entry.target == this.$refs.phoneContainer && entry.boundingClientRect.top < 0) {
-                    console.log(entry);
-                    console.log(entry.intersectionRatio);
-                    const powExp = 1
-                    const basis = 2
-                    const width = 200 * Math.pow(basis - entry.intersectionRatio, powExp)
-                    const height = 400 * Math.pow(basis - entry.intersectionRatio, powExp)
-                    const top = Math.min((window.innerHeight - height) / 2, Math.abs(entry.boundingClientRect.top))
+                if (entry.target !== this.$refs.phoneContainer) return;
+
+                const ratio = entry.boundingClientRect.top / entry.rootBounds.height;
+                const bottom = entry.rootBounds.height - entry.boundingClientRect.top
+                const powExp = 1
+                const basis = 2
+                const width = 200 * Math.pow(basis - entry.intersectionRatio, powExp)
+                const height = 400 * Math.pow(basis - entry.intersectionRatio, powExp)
+                const midThreshold = Math.min((window.innerHeight - height) / 2, Math.abs(bottom))
+                console.log(entry);
+                console.log(entry.intersectionRatio, entry.boundingClientRect.top, bottom, entry.rootBounds.height, entry.boundingClientRect.top / entry.rootBounds.height);
+
+                if (ratio < 0.3) {
                     this.phoneWidth = `${width}px`
                     this.phoneHeight = `${height}px`
                     this.phoneLeft = `${(window.innerWidth - width) / 2}px`
-                    this.phoneTop = `${top}px`
+                    this.phoneTop = `${midThreshold}px`
                     this.phonePosition = 'fixed'
                 }
                 else {
@@ -92,16 +115,6 @@ export default {
 
 <style lang="less" scoped>
 .encouragement-container {
-    // width: 100vw;
-    height: 100vh;
-    position: relative;
-}
-
-.phone-container {
-    min-height: calc(90vh - 60px);
-    min-width: 100vw;
-    max-height: calc(90vh - 60px);
-    max-width: 100vw;
     position: relative;
 }
 
@@ -111,8 +124,7 @@ export default {
     max-width: 100vw;
     max-height: 200vw;
     transform: rotate(90deg);
-    top: 0;
-    z-index: 2;
+    z-index: 0;
     position: absolute;
     transition: all 0.4s ease;
 }
@@ -123,38 +135,21 @@ export default {
     }
 }
 
-.inst {
-    z-index: 3;
-    color: white;
-    position: absolute;
-    top: 28vh;
-    text-align: center;
+.slide {
+    z-index: 1;
+    color: black;
+    float: none;
     font-size: 2em;
-    width: 100vw;
-}
-
-.ppt {
-    z-index: 3;
-    color: white;
-    position: absolute;
-    top: 60vh;
     text-align: center;
-    font-size: 2em;
-    width: 100vw;
-}
-
-.end {
     height: 100vh;
-    width: 100vw;
-    text-align: center;
-    font-size: 3em;
-    z-index: 3;
-    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
 
-    td {
-        vertical-align: middle;
-        height: inherit;
+    .text {
+        position: absolute;
+        top: 15%;
     }
 }
 </style>

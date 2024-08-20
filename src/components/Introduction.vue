@@ -55,12 +55,10 @@ export default {
     updateDisplay(entries) {
       entries.forEach((entry) => {
         if (entry.target == this.observedElm1) {
-          // console.log('box1');
-          this.toggleBox1 = entry.intersectionRatio > 0.5
+          this.toggleBox1 = entry.intersectionRatio > 0.80
         }
         else if (entry.target == this.observedElm2) {
-          // console.log('box2');
-          this.toggleBox2 = entry.intersectionRatio > 0.5
+          this.toggleBox2 = entry.intersectionRatio > 0.80
         }
       })
     }
