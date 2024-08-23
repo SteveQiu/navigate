@@ -1,6 +1,7 @@
 <template>
   <div class="banner-container">
-    <div class="img img-city rellax" data-rellax-speed="5"></div>
+    <div class="img img-city rellax" data-rellax-speed="3"></div>
+    <div class="img img-building rellax" data-rellax-speed="5"></div>
     <div class="img img-platform"></div>
     <div class="img img-title rellax" data-rellax-speed="-5">WELCOME!</div>
     <div class="parallax-fillter"></div>
@@ -30,6 +31,12 @@ export default {
 
 .img-city {
   background-image: url('../assets/img/night-city.png');
+  top: 0%;
+  min-height: 120vh;
+}
+
+.img-building {
+  background-image: url('../assets/img/night-city(building).png');
   top: 0%;
   min-height: 120vh;
 }

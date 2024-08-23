@@ -1,8 +1,9 @@
 {
   "name": "new-project",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "scripts": {
+    "start": "npm run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
