@@ -38,12 +38,17 @@ export default {
         'content': '(Discontinued) MEAN(MongoDB ExpressJS AngularJS NodeJS) stack. This is of an TODO List application for personal/team goal management',
         'disabled': true,
       }, {
+        'env': 'C#',
+        'link': '',
+        'content': 'Internal workplace projects and enterprise application development.',
+        'disabled': true,
+      }, {
         'env': 'Django',
         'link': 'https://noteweb.herokuapp.com/',
         'content': '(Discontinued) This is a simple note taking application with authentication.',
         'disabled': true,
       }, {
-        'env': 'Rail',
+        'env': 'Ruby',
         'link': 'https://infiloopmusic.herokuapp.com/',
         'content': '(Discontinued) A simple web application using Rails and prestige sql',
         'disabled': true,
