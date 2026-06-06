@@ -58,22 +58,29 @@ export default {
             }
         }
     },
-    destroyed() {
-        this.phoneObserver.unobserve(this.observedElm);
+    beforeDestroy() {
+        if (this.phoneObserver && this.observedElm) {
+            this.phoneObserver.unobserve(this.observedElm);
+        }
+        window.removeEventListener('resize', this.onResize);
     },
     mounted: function () {
-        this.setupPhoneObserver()
+        this.setupPhoneObserver();
+        window.addEventListener('resize', this.onResize);
     },
     methods: {
+        onResize() {
+            this.phoneLeft = `50%`;
+        },
         setupPhoneObserver() {
-            let threshold = []
+            let threshold = [];
             for (let i = 1; i < 20; i++) {
                 threshold.push(i / 20);
             }
             let options = {
                 root: null,
-                rootMargin: "0px",
-                threshold: threshold
+                rootMargin: '0px',
+                threshold: threshold,
             };
             this.observedElm = this.$refs.phoneContainer;
             this.phoneObserver = new IntersectionObserver(this.updatePhoneSize, options);
@@ -83,34 +90,26 @@ export default {
             entries.forEach((entry) => {
                 if (entry.target !== this.$refs.phoneContainer) return;
 
+                const width = 200 * Math.max(0.9, 2 - entry.intersectionRatio);
+                const height = 400 * Math.max(0.9, 2 - entry.intersectionRatio);
+                const offset = Math.min((window.innerHeight - height) / 2, 100);
                 const ratio = entry.boundingClientRect.top / entry.rootBounds.height;
-                const bottom = entry.rootBounds.height - entry.boundingClientRect.top
-                const powExp = 1
-                const basis = 2
-                const width = 200 * Math.pow(basis - entry.intersectionRatio, powExp)
-                const height = 400 * Math.pow(basis - entry.intersectionRatio, powExp)
-                const midThreshold = Math.min((window.innerHeight - height) / 2, Math.abs(bottom))
-                console.log(entry);
-                console.log(entry.intersectionRatio, entry.boundingClientRect.top, bottom, entry.rootBounds.height, entry.boundingClientRect.top / entry.rootBounds.height);
 
                 if (ratio < 0.3) {
-                    this.phoneWidth = `${width}px`
-                    this.phoneHeight = `${height}px`
-                    this.phoneLeft = `${(window.innerWidth - width) / 2}px`
-                    this.phoneTop = `${midThreshold}px`
-                    this.phonePosition = 'fixed'
+                    this.phoneWidth = `${width}px`;
+                    this.phoneHeight = `${height}px`;
+                    this.phoneTop = `${offset}px`;
+                    this.phonePosition = 'fixed';
+                } else {
+                    this.phoneWidth = '200px';
+                    this.phoneHeight = '400px';
+                    this.phoneTop = '0px';
+                    this.phonePosition = 'absolute';
                 }
-                else {
-                    this.phoneWidth = '200px'
-                    this.phoneHeight = '400px'
-                    this.phoneLeft = `${(window.innerWidth - 200) / 2}px`
-                    this.phoneTop = '0px'
-                    this.phonePosition = 'absolute'
-                }
-            })
-        }
-    }
-}
+            });
+        },
+    },
+};
 </script>
 
 <style lang="less" scoped>
@@ -119,6 +118,8 @@ export default {
 }
 
 .phone {
+    width: 200px;
+    height: 400px;
     min-width: 200px;
     min-height: 400px;
     max-width: 100vw;
@@ -126,12 +127,14 @@ export default {
     transform: rotate(90deg);
     z-index: 0;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
     transition: all 0.4s ease;
 }
 
 @media only screen and (max-width: 800px) {
     .phone {
-        transform: rotate(0deg);
+        transform: translateX(-50%) rotate(0deg);
     }
 }
 
@@ -146,10 +149,10 @@ export default {
     justify-content: center;
     align-items: center;
     position: relative;
+}
 
-    .text {
-        position: absolute;
-        top: 15%;
-    }
+.slide .text {
+    position: absolute;
+    top: 15%;
 }
 </style>

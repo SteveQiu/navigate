@@ -33,9 +33,16 @@ export default {
       observedElm2: null,
     }
   },
-  destroyed() {
-    this.observer.unobserve(this.observedElm1);
-    this.observer.unobserve(this.observedElm2);
+  beforeDestroy() {
+    if (this.observer) {
+      if (this.observedElm1) {
+        this.observer.unobserve(this.observedElm1);
+      }
+      if (this.observedElm2) {
+        this.observer.unobserve(this.observedElm2);
+      }
+      this.observer.disconnect();
+    }
   },
   mounted: function () {
     let options = {

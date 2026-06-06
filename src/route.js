@@ -2,24 +2,33 @@
 import HomeComponent from './components/home.vue';
 import projectsComponent from './components/projects.vue';
 import contactComponent from './components/contact.vue';
-
+import NotFound from './components/NotFound.vue';
 
 export default {
-    routes :[
+    mode: 'history',
+    scrollBehavior() {
+        return { x: 0, y: 0 };
+    },
+    routes: [
         {
-            path: '/', 
+            path: '/',
             name: 'home',
             component: HomeComponent,
         },
         {
-            path: '/projects', 
+            path: '/projects',
             name: 'projects',
             component: projectsComponent,
         },
         {
-            path: '/contact', 
+            path: '/contact',
             name: 'contact',
             component: contactComponent,
+        },
+        {
+            path: '*',
+            name: 'notfound',
+            component: NotFound,
         },
     ]
 }
