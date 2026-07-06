@@ -154,5 +154,6 @@ export default {
 .slide .text {
     position: absolute;
     top: 15%;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.85), 0 0 4px rgba(255, 255, 255, 0.6);
 }
 </style>
