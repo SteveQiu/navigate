@@ -319,9 +319,13 @@ export default {
   border-radius: 24px;
   text-decoration: none;
   color: #0f172a;
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.16));
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0) 45%),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.94), rgba(226, 232, 240, 0.9));
   backdrop-filter: blur(10px);
-  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.2);
+  box-shadow:
+    0 16px 28px rgba(15, 23, 42, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
   transition:
     transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
     opacity 0.35s ease,
@@ -330,8 +334,14 @@ export default {
 }
 
 .project-card.focused {
-  box-shadow: 0 24px 45px rgba(15, 23, 42, 0.35);
-  border-color: rgba(255, 255, 255, 0.6);
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0) 45%),
+    linear-gradient(160deg, #ffffff, #e6ebf3);
+  backdrop-filter: none;
+  box-shadow:
+    0 24px 45px rgba(15, 23, 42, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.8);
 }
 
 .project-card.parked {
